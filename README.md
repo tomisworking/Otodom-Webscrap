@@ -1,6 +1,6 @@
 # Otodom Real Estate Scraper
 
-This project provides a fast and straightforward Python script to automatically scrape real estate listings from the Otodom portal. It bypasses tedious HTML parsing by extracting data directly from the hidden JSON payload (`__NEXT_DATA__`) loaded by the website in the background, ensuring 100% accuracy of the retrieved information.
+This project provides Python script to automatically scrape real estate listings from the Otodom portal. It bypasses tedious HTML parsing by extracting data directly from the hidden JSON payload (`__NEXT_DATA__`) loaded by the website in the background, ensuring 100% accuracy of the retrieved information.
 
 ## Quick Start in 3 Steps
 
