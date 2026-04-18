@@ -1,0 +1,21 @@
+# Środowisko wirtualne
+venv/
+
+# Pliki z danymi
+*.csv
+*wynajem_wroclaw.csv
+sample_data.json
+
+# Pliki testowe
+raw_page.html
+test_scraper.py
+
+# Pliki tymczasowe i cache pythona
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+.env
+.ipynb_checkpoints/
