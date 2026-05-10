@@ -4,7 +4,7 @@
   "region": "dolnoslaskie",
   "city": "wroclaw",
   "district": "",
-  "pages": 3,
+  "pages": 50,
   "min_delay": 1.5,
   "max_delay": 3.5,
   "output_file": "wynajem_wroclaw.csv"

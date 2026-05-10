@@ -112,6 +112,11 @@ def scrape_otodom(options_file="options.json"):
                 break
                 
             for item in items:
+                # Extract characteristics if available
+                chars = {}
+                for ch in item.get('characteristics', []):
+                    chars[ch.get('key', '')] = ch.get('value', '')
+
                 row = {
                     'id': item.get('id'),
                     'title': item.get('title'),
@@ -121,7 +126,14 @@ def scrape_otodom(options_file="options.json"):
                     'area': item.get('areaInSquareMeters'),
                     'rooms': item.get('roomsNumber'),
                     'floor': item.get('floorNumber'),
-                    'location': get_location_name(item.get('location'))
+                    'location': get_location_name(item.get('location')),
+                    'building_type': chars.get('building_type', item.get('buildingType')),
+                    'heating_type': chars.get('heating', item.get('heatingType')),
+                    'year_built': chars.get('build_year', item.get('buildYear')),
+                    'ownership': chars.get('building_ownership', item.get('buildingOwnership')),
+                    'is_promoted': item.get('isPromoted', False),
+                    'created_at': item.get('createdAt', ''),
+                    'url': f"https://www.otodom.pl/pl/oferta/{item.get('slug', item.get('id'))}"
                 }
                 all_data.append(row)
                 
